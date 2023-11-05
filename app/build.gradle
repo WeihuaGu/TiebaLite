@@ -45,18 +45,6 @@ android {
     buildFeatures {
         compose true
     }
-    signingConfigs {
-        release {
-            keyAlias keystoreProperties["releaseKeyAlias"]
-            keyPassword keystoreProperties["releaseKeyPassword"]
-            storeFile file(rootDir.getCanonicalPath() + "/" + keystoreProperties["releaseKeyStore"])
-            storePassword keystoreProperties["releaseStorePassword"]
-            enableV1Signing true
-            enableV2Signing true
-            enableV3Signing true
-            enableV4Signing true
-        }
-    }
     buildTypes {
         release {
             minifyEnabled true
